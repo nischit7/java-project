@@ -56,6 +56,7 @@
         <jaxb.version>2.4.0-b180830.0359</jaxb.version>
         <jetty.version>9.4.36.v20210114</jetty.version>
         <junit.version>5.7.1</junit.version>
+        <jjwt.version>0.9.1</jjwt.version>
         <lombok.version>1.18.18</lombok.version>
         <maven.dependency.plugin.version>3.1.2</maven.dependency.plugin.version>
         <maven.enforcer.plugin.version>3.0.0-M3</maven.enforcer.plugin.version>
@@ -69,6 +70,7 @@
         <spring.boot.version>2.4.3</spring.boot.version>
         <spring.data.version>2.4.5</spring.data.version>
         <spring.version>5.3.4</spring.version>
+        <spring.security.version>5.4.5</spring.security.version>
         <surefire.plugin.version>3.0.0-M5</surefire.plugin.version>
         <tidy.maven.plugin.version>1.1.0</tidy.maven.plugin.version>
     </properties>
@@ -118,6 +120,12 @@
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
                 <version>${h2.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
                 <scope>compile</scope>
             </dependency>
             <dependency>
@@ -254,6 +262,12 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-actuator-autoconfigure</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jpa</artifactId>
                 <version>${spring.boot.version}</version>
                 <scope>compile</scope>
@@ -273,6 +287,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-jetty</artifactId>
+                <version>${spring.boot.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-security</artifactId>
                 <version>${spring.boot.version}</version>
                 <scope>compile</scope>
             </dependency>
@@ -308,6 +328,24 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-jpa</artifactId>
                 <version>${spring.data.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring.security.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring.security.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring.security.version}</version>
                 <scope>compile</scope>
             </dependency>
             <!-- ============================================================ -->
